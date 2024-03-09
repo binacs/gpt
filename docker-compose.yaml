@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  gpt_dc:
+    container_name: gpt
+    stdin_open: true
+    tty: true
+    build: .
+    # image: binacslee/gpt:latest
+    # ports:
+    #   - 80:80
+    environment:
+      AZURE_OPENAI_API_KEY: AZURE_OPENAI_API_KEY
+      AZURE_OPENAI_API_VERSION: AZURE_OPENAI_API_VERSION
+      AZURE_OPENAI_ENDPOINT: AZURE_OPENAI_ENDPOINT
+      AZURE_OPENAI_DEFAULT_MODEL: AZURE_OPENAI_DEFAULT_MODEL
